@@ -16,5 +16,10 @@ namespace FoodOrderXam.Views
         {
             InitializeComponent();
         }
+
+        private void SelectableItemsView_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
