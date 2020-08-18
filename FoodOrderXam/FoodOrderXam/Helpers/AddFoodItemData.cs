@@ -27,7 +27,8 @@ namespace FoodOrderXam.Helpers
                     Description = "Burger - Pizza - Breakfast",
                     Rating = " 4.8",
                     RatingDetail = " (121 raitings)",
-                    HomeSelected = "CompleteHeart"
+                    HomeSelected = "CompleteHeart",
+                    Price = 25,
                 },
                 new FoodItem
                 {
@@ -38,7 +39,8 @@ namespace FoodOrderXam.Helpers
                     Description = "Burger - Pizza - Breakfast",
                     Rating = " 4.8",
                     RatingDetail = " (121 raitings)",
-                    HomeSelected = "EmptyHeart"
+                    HomeSelected = "EmptyHeart",
+                    Price = 25,
                 },
                 new FoodItem
                 {
@@ -49,7 +51,8 @@ namespace FoodOrderXam.Helpers
                     Description = "Burger - Pizza - Breakfast",
                     Rating = " 4.8",
                     RatingDetail = " (121 raitings)",
-                    HomeSelected = "CompleteHeart"
+                    HomeSelected = "CompleteHeart",
+                    Price = 25,
                 },
                 new FoodItem
                 {
@@ -60,7 +63,8 @@ namespace FoodOrderXam.Helpers
                     Description = "Burger - Pizza - Breakfast",
                     Rating = " 4.8",
                     RatingDetail = " (121 raitings)",
-                    HomeSelected = "EmptyHeart"
+                    HomeSelected = "EmptyHeart",
+                    Price = 25,
                 },
                 new FoodItem
                 {
@@ -71,7 +75,8 @@ namespace FoodOrderXam.Helpers
                     Description = "Pizza - Breakfast",
                     Rating = " 4.4",
                     RatingDetail = " (120 raitings)",
-                    HomeSelected = "CompleteHeart"
+                    HomeSelected = "CompleteHeart",
+                    Price = 25,
                 },
                 new FoodItem
                 {
@@ -82,7 +87,8 @@ namespace FoodOrderXam.Helpers
                     Description = "Pizza Hub 2- Breakfast",
                     Rating = " 4.8",
                     RatingDetail = " (156 raitings)",
-                    HomeSelected = "EmptyHeart"
+                    HomeSelected = "EmptyHeart",
+                    Price = 25
                 },
                 new FoodItem
                 {
@@ -93,7 +99,8 @@ namespace FoodOrderXam.Helpers
                     Description = "Icecream - Breakfast",
                     Rating = " 4.4",
                     RatingDetail = " (120 raitings)",
-                    HomeSelected = "CompleteHeart"
+                    HomeSelected = "CompleteHeart",
+                    Price = 45
                 },
                 new FoodItem
                 {
@@ -104,7 +111,8 @@ namespace FoodOrderXam.Helpers
                     Description = "Cool Cakes- Breakfast",
                     Rating = " 4.8",
                     RatingDetail = " (156 raitings)",
-                    HomeSelected = "EmptyHeart"
+                    HomeSelected = "EmptyHeart",
+                    Price = 45
                 }
              };
         }
@@ -124,6 +132,7 @@ namespace FoodOrderXam.Helpers
                         Description = foodItem.Description,
                         Rating = foodItem.Rating,
                         RatingDetail = foodItem.RatingDetail,
+                        Price = foodItem.Price,
                         HomeSelected = foodItem.HomeSelected,
                     });
                 }

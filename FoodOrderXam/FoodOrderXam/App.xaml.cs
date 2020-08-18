@@ -1,7 +1,7 @@
 ﻿using System;
 using FoodOrderXam.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace FoodOrderXam
 {
@@ -12,8 +12,17 @@ namespace FoodOrderXam
             InitializeComponent();
 
             // MainPage = new MainPage();
-            MainPage = new LoginView();
-            //MainPage = new NavigationPage(new SettingsPage());
+            // MainPage = new LoginView();
+            // MainPage = new NavigationPage(new SettingsPage());
+            string username = Preferences.Get("Username", String.Empty);
+            if (String.IsNullOrEmpty(username))
+            {
+                MainPage = new LoginView();
+            }
+            else
+            {
+                MainPage = new ProductsView();
+            }
         }
 
         protected override void OnStart()

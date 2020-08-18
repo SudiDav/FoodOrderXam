@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using FoodOrderXam.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,9 +17,12 @@ namespace FoodOrderXam.Views
             InitializeComponent();
         }
 
-        private void SelectableItemsView_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            var category = e.CurrentSelection.FirstOrDefault() as Category;
+            if (category == null)
+                return;
+            await Navigation.PushModalAsync(new CategoryView(category));
         }
     }
 }
