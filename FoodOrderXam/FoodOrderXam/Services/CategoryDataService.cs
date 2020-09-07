@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Firebase.Database;
 using FoodOrderXam.Models;
 
+// ReSharper disable All
+
 namespace FoodOrderXam.Services
 {
     public class CategoryDataService

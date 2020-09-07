@@ -1,9 +1,10 @@
-﻿using System;
-using Firebase.Database;
+﻿using Firebase.Database;
 using Firebase.Database.Query;
 using System.Linq;
 using System.Threading.Tasks;
 using FoodOrderXam.Models;
+
+// ReSharper disable All
 
 namespace DemoApp.Services
 {

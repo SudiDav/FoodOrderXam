@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Threading.Tasks;
 using FoodOrderXam.Models;
 using FoodOrderXam.Services;
@@ -65,12 +63,12 @@ namespace FoodOrderXam.ViewModels
         private async Task LogoutAsync()
         {
             // ReSharper disable once AsyncConverter.AsyncAwaitMayBeElidedHighlighting
-            await Application.Current.MainPage.Navigation.PushModalAsync(new CartView());
+            await Application.Current.MainPage.Navigation.PushModalAsync(new LogoutView());
         }
 
         private async Task ViewCartAsync()
         {
-            await Application.Current.MainPage.Navigation.PushModalAsync(new LoginView());
+            await Application.Current.MainPage.Navigation.PushModalAsync(new CartView());
         }
 
         private async void GetLatestItems()

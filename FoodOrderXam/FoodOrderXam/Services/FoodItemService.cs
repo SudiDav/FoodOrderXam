@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Firebase.Database;
 using FoodOrderXam.Models;
+
+// ReSharper disable All
 
 namespace FoodOrderXam.Services
 {
@@ -54,7 +54,7 @@ namespace FoodOrderXam.Services
         {
             var latestFoodItems = new ObservableCollection<FoodItem>();
             var items = (await GetFoodItemsAsync())
-                .OrderByDescending(f => f.ProductID).Take(3);
+                .OrderByDescending(f => f.ProductID).Take(4);
             foreach (var item in items)
             {
                 latestFoodItems.Add(item);

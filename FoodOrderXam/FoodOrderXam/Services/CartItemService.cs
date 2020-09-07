@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FoodOrderXam.Services
+﻿namespace FoodOrderXam.Services
 {
     public class CartItemService
     {

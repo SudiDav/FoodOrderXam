@@ -23,6 +23,8 @@ namespace FoodOrderXam.Views
             if (category == null)
                 return;
             await Navigation.PushModalAsync(new CategoryView(category));
+
+            ((CollectionView)sender).SelectedItem = null;
         }
     }
 }
