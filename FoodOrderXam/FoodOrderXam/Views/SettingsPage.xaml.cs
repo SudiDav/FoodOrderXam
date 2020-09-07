@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FoodOrderXam.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
+//ReSharper disable all
 
 namespace FoodOrderXam.Views
 {
@@ -27,6 +25,15 @@ namespace FoodOrderXam.Views
         {
             var addPoductsData = new AddFoodItemData();
             await addPoductsData.AddFoodItemAsync();
+        }
+
+        private void ButtonCart_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var cct = new CreateCartTable();
+            if (cct.CreateTable())
+                DisplayAlert("Success", "Cart Table Created", "Ok");
+            else
+                DisplayAlert("Error", "Error while creating table", "Ok");
         }
     }
 }

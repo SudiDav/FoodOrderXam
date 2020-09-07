@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FoodOrderXam.Models
+﻿namespace FoodOrderXam.Models
 {
     public class FoodItem
     {

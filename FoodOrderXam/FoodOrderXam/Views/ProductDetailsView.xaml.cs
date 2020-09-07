@@ -1,4 +1,5 @@
-﻿using FoodOrderXam.Models;
+﻿using System;
+using FoodOrderXam.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +11,11 @@ namespace FoodOrderXam.Views
         public ProductDetailsView(FoodItem foodItem)
         {
             InitializeComponent();
+        }
+
+        private void ImageButton_OnClicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
