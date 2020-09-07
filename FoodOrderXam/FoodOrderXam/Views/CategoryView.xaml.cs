@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using FoodOrderXam.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,26 +13,27 @@ namespace FoodOrderXam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CategoryView : ContentPage
     {
-        private Category _category;
-
-        public CategoryView()
-        {
-            InitializeComponent();
-        }
+        private CategoryViewModel _categoryVm;
 
         public CategoryView(Category category)
         {
-            _category = category;
+            InitializeComponent();
+            _categoryVm = new CategoryViewModel(category);
+            this.BindingContext = _categoryVm;
         }
 
-        private void ImageButton_OnClicked(object sender, EventArgs e)
+        private async void ImageButton_OnClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            await Navigation.PopModalAsync();
         }
 
-        private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            var selectedProduct = e.CurrentSelection.FirstOrDefault() as FoodItem;
+            if (selectedProduct == null)
+                return;
+            await Navigation.PushModalAsync(new ProductDetailsView(selectedProduct));
+            ((CollectionView)sender).SelectedItem = null;
         }
     }
 }

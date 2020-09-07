@@ -5,6 +5,8 @@ using FoodOrderXam.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
+// ReSharper disable All
+
 namespace FoodOrderXam.ViewModels
 {
     public class LoginViewModel : BaseViewModel
